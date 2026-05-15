@@ -1,0 +1,140 @@
+/* Alfred — Memory module styles. Tokens only. */
+
+.mem-modal-overlay {
+  position: fixed; inset: 0; z-index: 9998;
+  background: rgba(0,0,0,0.55);
+  backdrop-filter: blur(2px);
+  display: flex; align-items: stretch; justify-content: stretch;
+}
+.mem-modal {
+  margin: 4vh 4vw;
+  flex: 1;
+  background: var(--bg-2, #0d1620);
+  color: var(--fg-1, #d6e1ee);
+  border: 1px solid var(--border, #1e2a3a);
+  border-radius: 10px;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.6);
+  display: flex; flex-direction: column;
+  overflow: hidden;
+  font-family: var(--font-ui, 'Exo 2', system-ui, sans-serif);
+}
+.mem-modal-head {
+  display: flex; align-items: center; gap: 12px;
+  padding: 10px 14px;
+  border-bottom: 1px solid var(--border, #1e2a3a);
+  background: var(--bg-3, #0a1018);
+}
+.mem-modal-head h2 {
+  margin: 0; font-size: 16px; color: var(--accent, #00e5ff); flex: 1;
+}
+.mem-modal-actions { display: flex; gap: 6px; }
+
+.mem-btn {
+  background: var(--bg-3, #0a1018); color: inherit;
+  border: 1px solid var(--border, #1e2a3a);
+  border-radius: 6px; padding: 5px 10px;
+  cursor: pointer; font: inherit;
+}
+.mem-btn:hover { border-color: var(--accent, #00e5ff); }
+.mem-btn--primary {
+  background: var(--accent, #00e5ff); color: var(--bg-1, #050a12);
+  border-color: var(--accent, #00e5ff); font-weight: 600;
+}
+.mem-btn--danger:hover { border-color: #ff3366; color: #ff3366; }
+.mem-btn--ghost { background: transparent; }
+
+.mem-toolbar {
+  display: flex; align-items: center; gap: 8px;
+  padding: 8px 14px;
+  border-bottom: 1px solid var(--border, #1e2a3a);
+  flex-wrap: wrap;
+}
+.mem-toolbar .mem-search { flex: 1; min-width: 200px; }
+.mem-toolbar input, .mem-toolbar select {
+  background: var(--bg-3, #0a1018); color: inherit;
+  border: 1px solid var(--border, #1e2a3a);
+  border-radius: 6px; padding: 5px 8px; font: inherit;
+}
+.mem-counter { color: var(--muted, #7c8aa0); font-size: 12px; margin-left: auto; }
+.mem-conf-wrap {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-size: 12px; color: var(--muted, #7c8aa0);
+  background: var(--bg-3, #0a1018);
+  border: 1px solid var(--border, #1e2a3a);
+  border-radius: 6px; padding: 3px 8px;
+}
+.mem-conf-wrap .mem-conf-val { color: var(--accent, #00e5ff); font-weight: 700; }
+.mem-conf-wrap input[type="range"] { width: 100px; accent-color: var(--accent, #00e5ff); }
+.mem-char-counter {
+  align-self: flex-end; font-size: 11px; color: var(--muted, #7c8aa0);
+  font-family: var(--font-mono, ui-monospace, monospace);
+  margin-top: 2px;
+}
+.mem-char-counter.is-warn { color: #f59e0b; }
+.mem-char-counter.is-max  { color: #ff3366; font-weight: 700; }
+
+.mem-modal-body {
+  flex: 1; min-height: 0;
+  display: grid; grid-template-columns: 320px 1fr; gap: 0;
+}
+.mem-list {
+  border-right: 1px solid var(--border, #1e2a3a);
+  overflow: auto; padding: 8px; display: flex; flex-direction: column; gap: 6px;
+}
+.mem-empty { padding: 20px; text-align: center; color: var(--muted, #7c8aa0); }
+
+.mem-item {
+  display: grid; grid-template-columns: auto 1fr; gap: 4px 10px;
+  padding: 8px 10px;
+  background: var(--bg-3, #0a1018);
+  color: inherit;
+  border: 1px solid var(--border, #1e2a3a);
+  border-left: 3px solid var(--accent, #00e5ff);
+  border-radius: 6px; cursor: pointer; font: inherit; text-align: left;
+}
+.mem-item:hover { border-color: var(--accent, #00e5ff); }
+.mem-item.on { background: rgba(0,229,255,0.08); }
+.mem-item-type {
+  grid-row: 1 / span 2; align-self: start;
+  font-size: 11px; text-transform: uppercase; font-weight: 700;
+  color: var(--accent, #00e5ff);
+  background: rgba(0,229,255,0.1);
+  padding: 2px 6px; border-radius: 4px; white-space: nowrap;
+}
+.mem-item-content { font-size: 13px; line-height: 1.4; word-break: break-word; }
+.mem-item-meta { font-size: 11px; color: var(--muted, #7c8aa0); grid-column: 2; }
+
+.mem-edit { padding: 14px 18px; overflow: auto; }
+.mem-form { display: flex; flex-direction: column; gap: 10px; }
+.mem-form label {
+  display: flex; flex-direction: column; gap: 4px;
+  font-size: 12px; color: var(--muted, #7c8aa0);
+}
+.mem-form input, .mem-form select, .mem-form textarea {
+  background: var(--bg-3, #0a1018); color: var(--fg-1, #d6e1ee);
+  border: 1px solid var(--border, #1e2a3a);
+  border-radius: 6px; padding: 6px 10px;
+  font: inherit; font-size: 14px;
+}
+.mem-form textarea { font-family: var(--font-mono, ui-monospace, monospace); resize: vertical; min-height: 100px; }
+.mem-row { display: flex; gap: 10px; flex-wrap: wrap; }
+.mem-row > label { flex: 1; min-width: 140px; }
+.mem-grow { flex: 2 !important; }
+.mem-form-actions {
+  display: flex; gap: 8px; align-items: center; padding-top: 6px;
+  border-top: 1px solid var(--border, #1e2a3a);
+  flex-wrap: wrap;
+}
+.mem-meta { margin-left: auto; font-size: 11px; color: var(--muted, #7c8aa0); }
+
+/* Light theme overrides */
+[data-theme="light"] .mem-modal { background: #ffffff; color: #1a2330; border-color: #d0d8e3; }
+[data-theme="light"] .mem-modal-head { background: #f4f6fa; }
+[data-theme="light"] .mem-btn,
+[data-theme="light"] .mem-toolbar input,
+[data-theme="light"] .mem-toolbar select,
+[data-theme="light"] .mem-form input,
+[data-theme="light"] .mem-form select,
+[data-theme="light"] .mem-form textarea,
+[data-theme="light"] .mem-item { background: #f4f6fa; border-color: #d0d8e3; color: #1a2330; }
+[data-theme="light"] .mem-item.on { background: rgba(0,180,210,0.12); }

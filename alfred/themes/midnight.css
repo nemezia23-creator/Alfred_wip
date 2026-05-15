@@ -1,0 +1,36 @@
+@import url('./_base.css');
+
+/* === MIDNIGHT THEME — calmer, deeper blues === */
+:root {
+  --surface-0: #0a0e1a;
+  --surface-1: #111726;
+  --surface-2: #182033;
+  --surface-3: #1f2940;
+  --surface-4: #29354f;
+  --surface-5: #38456a;
+
+  --accent-primary: #6366f1;
+  --accent-primary-dim: rgba(99, 102, 241, 0.35);
+  --accent-secondary: #a78bfa;
+  --accent-tertiary: #f472b6;
+  --accent-quaternary: #38bdf8;
+
+  --color-danger: #f87171;
+  --color-warning: #fbbf24;
+  --color-success: #4ade80;
+  --color-info: #38bdf8;
+
+  --text-primary: #cbd5e1;
+  --text-bright: #f1f5f9;
+  --text-dim: #64748b;
+  --text-code: #a78bfa;
+
+  --border-default: 1px solid #29354f;
+  --border-accent: 1px solid rgba(99, 102, 241, 0.35);
+  --border-subtle: 1px solid #1f2940;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 20px rgba(99, 102, 241, 0.35);
+}

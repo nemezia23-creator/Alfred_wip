@@ -1,0 +1,36 @@
+@import url('./_base.css');
+
+/* === LIGHT THEME === */
+:root {
+  --surface-0: #ffffff;
+  --surface-1: #f8fafc;
+  --surface-2: #f1f5f9;
+  --surface-3: #e2e8f0;
+  --surface-4: #cbd5e1;
+  --surface-5: #94a3b8;
+
+  --accent-primary: #0284c7;
+  --accent-primary-dim: rgba(2, 132, 199, 0.25);
+  --accent-secondary: #059669;
+  --accent-tertiary: #ea580c;
+  --accent-quaternary: #7c3aed;
+
+  --color-danger: #dc2626;
+  --color-warning: #d97706;
+  --color-success: #059669;
+  --color-info: #0284c7;
+
+  --text-primary: #1e293b;
+  --text-bright: #0f172a;
+  --text-dim: #64748b;
+  --text-code: #0284c7;
+
+  --border-default: 1px solid #cbd5e1;
+  --border-accent: 1px solid rgba(2, 132, 199, 0.4);
+  --border-subtle: 1px solid #e2e8f0;
+
+  --shadow-sm: 0 1px 3px rgba(15, 23, 42, 0.08);
+  --shadow-md: 0 4px 14px rgba(15, 23, 42, 0.1);
+  --shadow-lg: 0 12px 32px rgba(15, 23, 42, 0.15);
+  --shadow-glow: 0 0 12px rgba(2, 132, 199, 0.2);
+}

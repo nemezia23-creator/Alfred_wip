@@ -1,0 +1,21 @@
+/* Phase 6 — file pipeline visual cues */
+
+.chat-input-bar.is-dragover {
+  outline: 2px dashed var(--accent-primary, #00e5ff);
+  outline-offset: -4px;
+  background: color-mix(in oklab, var(--accent-primary, #00e5ff) 10%, transparent);
+}
+
+.chat-file-status {
+  font-size: 12px;
+  color: var(--text-dim, #4a6b8a);
+  padding: 4px 8px;
+  border-top: 1px dashed var(--surface-4, #122540);
+  font-family: var(--font-mono, monospace);
+}
+.chat-file-status[data-state="error"] { color: var(--color-danger, #ff3366); }
+.chat-file-status:empty { display: none; }
+
+.chat-btn[data-action="attach"] {
+  font-size: 16px;
+}

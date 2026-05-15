@@ -1,0 +1,43 @@
+@import url('./_base.css');
+
+/* === CYBER THEME — VOANH heritage === */
+:root {
+  --surface-0: #020509;
+  --surface-1: #050d18;
+  --surface-2: #091525;
+  --surface-3: #0d1e33;
+  --surface-4: #122540;
+  --surface-5: #1a3455;
+
+  --accent-primary: #00e5ff;
+  --accent-primary-dim: rgba(0, 229, 255, 0.35);
+  --accent-secondary: #00ff9d;
+  --accent-tertiary: #ff6b35;
+  --accent-quaternary: #7c3aed;
+
+  --color-danger: #ff3366;
+  --color-warning: #f59e0b;
+  --color-success: #00ff9d;
+  --color-info: #00e5ff;
+
+  --text-primary: #b8d4f0;
+  --text-bright: #e8f4ff;
+  --text-dim: #4a6b8a;
+  --text-code: #00e5ff;
+
+  --border-default: 1px solid #1a3455;
+  --border-accent: 1px solid rgba(0, 229, 255, 0.3);
+  --border-subtle: 1px solid #122540;
+
+  --shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --shadow-md: 0 4px 20px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 8px 40px rgba(0, 0, 0, 0.7);
+  --shadow-glow: 0 0 15px rgba(0, 229, 255, 0.35);
+}
+
+body {
+  background-image:
+    repeating-linear-gradient(0deg, transparent, transparent 2px, rgba(0,229,255,0.015) 2px, rgba(0,229,255,0.015) 4px),
+    radial-gradient(ellipse 80% 50% at 50% -20%, rgba(0,229,255,0.06) 0%, transparent 60%),
+    radial-gradient(ellipse 60% 40% at 100% 100%, rgba(124,58,237,0.05) 0%, transparent 60%);
+}

@@ -1,0 +1,97 @@
+/* === Tab bar — Phase 3 === */
+
+#alfred-tabs {
+  width: min(960px, 100%);
+  margin: 0 auto var(--space-2);
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+}
+
+.tab-bar {
+  display: flex;
+  align-items: stretch;
+  gap: var(--space-1);
+  width: 100%;
+  background: var(--surface-1);
+  border: var(--border-subtle);
+  border-radius: var(--radius-md);
+  padding: 4px;
+  overflow: hidden;
+}
+
+.tab-bar-inner {
+  display: flex;
+  flex: 1;
+  gap: 2px;
+  overflow-x: auto;
+  scrollbar-width: thin;
+}
+
+.tab-item {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  max-width: 200px;
+  min-width: 80px;
+  padding: 6px 10px;
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: var(--text-primary);
+  background: var(--surface-2);
+  border: 1px solid transparent;
+  border-radius: var(--radius-sm);
+  cursor: pointer;
+  user-select: none;
+  transition: var(--transition-fast);
+  border-bottom: 2px solid transparent;
+}
+
+.tab-item:hover { background: var(--surface-3); color: var(--text-bright); }
+
+.tab-item.is-active {
+  background: var(--surface-3);
+  color: var(--text-bright);
+  border-bottom-color: var(--accent-primary);
+}
+
+.tab-item.is-dragging { opacity: 0.4; }
+
+.tab-title {
+  flex: 1;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.tab-pin { font-size: 0.7rem; opacity: 0.8; }
+
+.tab-close {
+  background: transparent;
+  border: none;
+  color: var(--text-dim);
+  font-size: 1rem;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 4px;
+  border-radius: var(--radius-sm);
+  opacity: 0;
+  transition: var(--transition-fast);
+}
+.tab-item:hover .tab-close,
+.tab-item.is-active .tab-close { opacity: 1; }
+.tab-close:hover { color: var(--color-danger); background: var(--surface-4); }
+
+.tab-new {
+  flex-shrink: 0;
+  background: var(--surface-2);
+  color: var(--text-primary);
+  border: 1px solid transparent;
+  font-family: var(--font-mono);
+  font-size: 1rem;
+  width: 32px;
+  cursor: pointer;
+  border-radius: var(--radius-sm);
+  transition: var(--transition-fast);
+}
+.tab-new:hover { background: var(--surface-3); color: var(--accent-primary); border-color: var(--accent-primary); }
